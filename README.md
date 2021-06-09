@@ -1,1 +1,3 @@
-# bdpsdatran
+#build 
+qmake bdpsdatran.pro
+make
