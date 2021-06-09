@@ -2,9 +2,12 @@ FROM bdps_run:1.0
 
 WORKDIR /ppp/serv/bin
 
-COPY ./bin/bdpsdatran ./bdpsdatran
-RUN chmod 755 ./bdpsdatran
+ENV SOFTNAME bdpsdatran
+
+COPY ./bin/$SOFTNAME ./$SOFTNAME
+
+RUN chmod 755 ./$SOFTNAME
 
 EXPOSE 2102
 
-CMD exec ./bdpsdatran 
+CMD exec ./$SOFTNAME
