@@ -1,2 +1,2 @@
 #build 
-qmake bdpsdatran.pro && make
+# mdkir bin && qmake bdpsdatran.pro && make
